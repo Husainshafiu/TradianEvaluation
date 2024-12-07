@@ -32,7 +32,7 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased bg-[#f6f6f6]`}
       >
         <TopNav />
-        <main className="pt-24 pb-12">
+        <main className="pt-20 pb-12">
           {children}
         </main>
         <Footer />

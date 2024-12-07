@@ -11,6 +11,7 @@ import {
     NavigationMenuContent} from "@/components/ui/navigation-menu";
 import {Button} from "@/components/ui/button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
+import Link from "next/link";
 
 
 export default function TopNav() {
@@ -29,14 +30,15 @@ export default function TopNav() {
   return (
     <nav className={`fixed top-0 z-10 left-0 w-screen py-4 bg-white ${isScrolled ? "shadow-md" : "" }`} >
       <div className="container  mx-auto flex justify-between items-center lg:px-20">
-          <div className="flex items-center">
-              <Image width={50} height={50} src={'/logo.png'} alt={''}/>
-              <p>Tradian</p>
-          </div>
-
+          <Link href={'/'}>
+              <div className="flex items-center">
+                  <Image width={50} height={50} src={'/logo.png'} alt={''}/>
+                  <p>Tradian</p>
+              </div>
+          </Link>
           <NavigationMenu>
-              <NavigationMenuList >
-                  <NavigationMenuItem >
+              <NavigationMenuList>
+                  <NavigationMenuItem>
                       <NavigationMenuTrigger>Business</NavigationMenuTrigger>
                       <NavigationMenuContent className="">
                           <Tabs defaultValue="Import" className="w-[600px] h-full flex items-start">
@@ -78,8 +80,8 @@ export default function TopNav() {
                   </NavigationMenuItem>
 
                   <NavigationMenuItem>
-                      <NavigationMenuLink>
-                          Individual
+                      <NavigationMenuLink href={'/support'}>
+                          support
                       </NavigationMenuLink>
                   </NavigationMenuItem>
 

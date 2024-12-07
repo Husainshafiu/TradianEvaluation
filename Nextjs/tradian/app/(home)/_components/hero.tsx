@@ -8,7 +8,6 @@ import { useForm } from "react-hook-form"
 import {
     Form,
     FormControl,
-    FormDescription,
     FormField,
     FormItem,
     FormLabel,
@@ -36,6 +35,7 @@ export default function Hero() {
             rNumber: "",
         },
     })
+
     function onSubmit(values: z.infer<typeof formSchema>) {
         console.log(values)
         toast(
@@ -51,24 +51,28 @@ export default function Hero() {
     }
 
     return (
-        <div className="container mx-auto w-full rounded-[4rem] border border-red-700 flex items-center flex-col p-16">
-            <h1 className="text-xl items-center">Get Ready for Tradian</h1>
-            <p>
-                Phase 1 of Tradian is coming in November. Join our training sessions to master the platform and
-                seamlessly
-                transition your import and export operations to Tradian.
-            </p>
-            <Button>
-                Register for training
-            </Button>
+        <div style={{
+            background: 'linear-gradient(207deg, rgba(249,219,218,1) 0%, rgba(232,234,243,1) 100%)',
+        }} className="container mx-auto w-full rounded-[2rem] flex items-center flex-col p-16">
+            <div className={'flex gap-6 flex-col items-center px-[15rem] '}>
+                <h1 className="text-6xl items-center">Get Ready for Tradian</h1>
+                <p className={'text-md text-center'}>
+                    Phase 1 of Tradian is coming in November. Join our training sessions to master the platform and
+                    seamlessly
+                    transition your import and export operations to Tradian.
+                </p>
+                <Button>
+                    Register for training
+                </Button>
+            </div>
 
-            <div>
-                <h3>Quick Lookup</h3>
-                <p>
+            <div className={'flex flex-col gap-3 mt-32 items-center'}>
+                <h3 className={'text-2xl font-bold'}>Quick Lookup</h3>
+                <p className={'text-center'}>
                     instantly find declaration status, tarrif details and vessel/container tracking
                 </p>
             </div>
-            <Tabs defaultValue="declaration" className="w-[400px]">
+            <Tabs defaultValue="declaration" className="w-[400px] mt-8">
                 <TabsList>
                     <TabsTrigger value="declaration">Check Declaration</TabsTrigger>
                     <TabsTrigger value="container">Container Tracking</TabsTrigger>
