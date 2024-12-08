@@ -10,24 +10,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="591aa2ac-5ad7-4056-81ce-8e8a2263c61d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/TradianEvaluation.web/Views/Home/Support.cshtml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Nextjs/tradian/app/admin/support/page.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Nextjs/tradian/components/auth/_actions/sign-in.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Nextjs/tradian/components/auth/signin-button.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.TradianEvaluation/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TradianEvaluation/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TradianEvaluation.web/Controllers/HomeController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TradianEvaluation.web/Controllers/HomeController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TradianEvaluation.web/Views/Shared/Partials/_footer.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/TradianEvaluation.web/Views/Shared/Partials/_footer.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TradianEvaluation.web/Views/Shared/_Layout.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/TradianEvaluation.web/Views/Shared/_Layout.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TradianEvaluation.web/wwwroot/scss/global.css" beforeDir="false" afterPath="$PROJECT_DIR$/TradianEvaluation.web/wwwroot/scss/global.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TradianEvaluation.web/wwwroot/scss/global.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/TradianEvaluation.web/wwwroot/scss/global.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TradianEvaluation.web/wwwroot/scss/global.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/TradianEvaluation.web/wwwroot/scss/global.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TradianEvaluation.web/wwwroot/scss/global.scss" beforeDir="false" afterPath="$PROJECT_DIR$/TradianEvaluation.web/wwwroot/scss/global.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Nextjs/tradian/app/business/export/export-registration/_actions/create-record.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Nextjs/tradian/app/business/export/export-registration/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../Nextjs/tradian/app/business/export/export-registration/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Nextjs/tradian/app/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../Nextjs/tradian/app/layout.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Nextjs/tradian/auth.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../Nextjs/tradian/auth.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Nextjs/tradian/components/top-nav.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../Nextjs/tradian/components/top-nav.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Nextjs/tradian/middleware.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../Nextjs/tradian/middleware.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -144,7 +127,7 @@
       <updated>1733494685461</updated>
       <workItem from="1733494686676" duration="1109000" />
       <workItem from="1733544756297" duration="605000" />
-      <workItem from="1733608410046" duration="18564000" />
+      <workItem from="1733608410046" duration="19757000" />
     </task>
     <servers />
   </component>

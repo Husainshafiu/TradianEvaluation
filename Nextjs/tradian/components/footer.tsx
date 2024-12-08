@@ -63,35 +63,35 @@ export default function Footer() {
                                     render={({field}) => (
                                         <FormItem>
                                             <FormControl>
-                                                <Input placeholder="email" {...field} />
+                                                <Input className={'rounded-none rounded-tl-lg rounded-bl-lg'}  placeholder="email" {...field} />
                                             </FormControl>
                                             <FormMessage/>
                                         </FormItem>
                                     )}
                                 />
-                                <Button type="submit">Submit</Button>
+                                <Button className={'bg-[#1f0e0a] text-[#ffc7c7] rounded-none rounded-tr-lg rounded-br-lg'} type="submit">Subscribe Now</Button>
                             </div>
                         </form>
                     </Form>
                 </div>
 
                 <div className={'flex py-12 justify-between'}>
-                    <div className={'flex gap-6 text-white'}>
-                        <ul>
-                            <li>Quick links</li>
+                    <div className={'flex gap-12 text-white'}>
+                        <ul className={'flex flex-col gap-2'}>
+                            <li className={'text-[#ffc7c7]'}>Quick links</li>
                             <li>oneGov</li>
                             <li>Tradenet</li>
                         </ul>
-                        <ul>
-                            <li>Logistic</li>
+                        <ul className={'flex flex-col gap-2'}>
+                            <li className={'text-[#ffc7c7]'}>Logistic</li>
                             <li>Vessels</li>
                             <li>Shipping Agents</li>
                             <li>Freight Forwarders</li>
                             <li>Courier Agents</li>
                             <li>Brokers</li>
                         </ul>
-                        <ul>
-                            <li>Terms and Policies</li>
+                        <ul className={'flex flex-col gap-2'}>
+                            <li className={'text-[#ffc7c7]'}>Terms and Policies</li>
                             <li>Terms and Conditions</li>
                         </ul>
                     </div>
