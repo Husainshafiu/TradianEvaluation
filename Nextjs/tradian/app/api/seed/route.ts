@@ -14,7 +14,7 @@ export async function GET (req: NextRequest) {
     //seed support data
     const supportData : SupportTypeInsert[]  = [
         {
-            title: 'Import',
+            title: 'Self Registration Guide',
             thumbnailUrl: 'https://images.unsplash.com/photo-1683277464433-d2d4e1e4b0a4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80',
             description: 'Import goods from foreign countries to Maldives'
         },

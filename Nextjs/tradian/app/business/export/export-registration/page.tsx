@@ -1,16 +1,10 @@
-import {createRecord} from "@/app/business/export/export-registration/_actions/create-record";
+import {auth} from "@/auth";
 
-export default function ExportRegistration() {
+export default async function ExportRegistration() {
+    const session = await auth()
     return (
-        <div>
-            <h1>Export Registration</h1>
-            <form onSubmit={async () => {
-                "use server"
-                await createRecord();
-            }
-            } className="">
-                <button type="submit">Submit</button>
-            </form>
-        </div>
+        <pre>
+            {JSON.stringify(session, null, 2)}
+        </pre>
     )
 }

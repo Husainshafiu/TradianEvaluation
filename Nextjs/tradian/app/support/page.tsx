@@ -1,8 +1,19 @@
+
 import {ToggleGroup, ToggleGroupItem} from "@/components/ui/toggle-group";
 import TopicItem from "@/app/support/components/topic-item";
 import FAQ from "@/app/components/faq";
+import {db} from "@/lib/db";
+import {support} from "@/lib/db/schema";
 
-export default function Support() {
+async function getData(){
+    const data = await db.select().from(support)
+    return data
+}
+
+export default async function Support() {
+
+    const items = await getData()
+
     return (
         <>
             <div className={'flex flex-col gap-3 items-center bg-gray-200 px-[15rem] py-16'}>
@@ -28,10 +39,9 @@ export default function Support() {
                 <div className={'flex flex-col'}>
                     <h2>Popular Topics</h2>
                     <div className={'grid grid-cols-3 gap-6'}>
-                        <TopicItem/>
-                        <TopicItem/>
-                        <TopicItem/>
-                        <TopicItem/>
+                        {items.map((item, index) => {
+                            return <TopicItem {...item} key={`topic${index}`}/>
+                        })}
                     </div>
                 </div>
 

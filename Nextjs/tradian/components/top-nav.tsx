@@ -9,9 +9,11 @@ import {
     NavigationMenuTrigger,
     NavigationMenuLink,
     NavigationMenuContent} from "@/components/ui/navigation-menu";
-import {Button} from "@/components/ui/button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import Link from "next/link";
+import {SignIn} from "@/components/auth/signin-button";
+import {SignOut} from "@/components/auth/signout-button";
+import {useSession} from "next-auth/react";
 
 
 export default function TopNav() {
@@ -27,6 +29,9 @@ export default function TopNav() {
             window.removeEventListener("scroll", handleScroll);
         };
     }, []);
+
+    const { data: session } = useSession()
+
   return (
     <nav className={`fixed top-0 z-10 left-0 w-screen py-4 bg-white ${isScrolled ? "shadow-md" : "" }`} >
       <div className="container  mx-auto flex justify-between items-center lg:px-20">
@@ -85,11 +90,17 @@ export default function TopNav() {
                       </NavigationMenuLink>
                   </NavigationMenuItem>
 
+                  <NavigationMenuItem>
+                      <NavigationMenuLink href={'/business/export/export-registration'}>
+                          Business
+                      </NavigationMenuLink>
+                  </NavigationMenuItem>
+
               </NavigationMenuList>
           </NavigationMenu>
-          <Button>
-              Login
-          </Button>
+          {
+              session ? <SignOut/> : <SignIn/>
+          }
       </div>
     </nav>
   );
