@@ -23,6 +23,11 @@ public class HomeController : Controller
         return View();
     }
 
+    public IActionResult Support()
+    {
+        return View();
+    }
+
 
     [HttpGet]
     public IActionResult GetDeclarationForm()
