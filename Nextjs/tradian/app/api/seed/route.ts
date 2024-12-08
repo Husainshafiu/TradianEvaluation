@@ -5,6 +5,12 @@ import {support, users} from "@/lib/db/schema";
 
 export async function GET (req: NextRequest) {
 
+    const record = await db.select().from(support).limit(1)
+    const hasData = record.length > 0;
+
+    if (hasData) {
+        return NextResponse.json({message: 'seed data already inserted'})
+    }
     //seed support data
     const supportData : SupportTypeInsert[]  = [
         {
@@ -24,7 +30,6 @@ export async function GET (req: NextRequest) {
         }
     ]
 
-
     //seed user data
     const userData : UserTypeInsert[]  = [
         {
@@ -41,18 +46,12 @@ export async function GET (req: NextRequest) {
         }]
 
     try {
-        // await db.insert(support).values(supportData)
-        // await db.insert(users).values(userData)
-
-        await db.insert(support).values({
-            title: 'Import',
-            thumbnailUrl: 'https://images.unsplash.com/photo-1683277464433-d2d4e1e4b0a4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80',
-            description: 'Import goods from foreign countries to Maldives'
-        })
+        await db.insert(support).values(supportData)
+        await db.insert(users).values(userData)
     }catch (e) {
         console.log(e)
-        return NextResponse.json(e.message)
+        return NextResponse.json({message: 'Error occured'})
     }
-
     return NextResponse.json({message: 'seed data inserted successfully'})
+
 }
