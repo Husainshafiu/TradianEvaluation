@@ -1,0 +1,11 @@
+@model DeclarationStatusViewModel
+
+<div class="flex flex-col">
+    <h3>Declaration Status</h3>
+    <P class="sm">Check import and export declaration status</P>
+    <form class="flex ">
+        @Html.DisplayFor(x=> x.CNumber, "Input_string", new{ showLabel = true, required = true })
+        @Html.DisplayFor(x=> x.RNumber, "Input_string", new{ showLabel = true, required = true })
+        <button type="submit">Search</button>
+    </form>
+</div>

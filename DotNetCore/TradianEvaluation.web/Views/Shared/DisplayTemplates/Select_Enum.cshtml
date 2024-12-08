@@ -1,0 +1,8 @@
+﻿@model Enum
+
+<div>
+    <label asp-for="@Model"></label>
+    <select required asp-for="@Model" asp-items="@Html.GetEnumSelectList(Model.GetType())">
+    </select>
+    <span asp-validation-for="@Model" class="text-danger"></span>
+</div>

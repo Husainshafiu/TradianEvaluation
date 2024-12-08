@@ -1,0 +1,21 @@
+﻿@model float
+
+@{
+    var name = ViewData.TemplateInfo.HtmlFieldPrefix;
+    var required = ViewData["required"] as bool? ?? false;
+}
+
+<div>
+    <label  asp-for="@Model"></label>
+    
+    @if (required)
+    {
+        <input type="number" required asp-for="@Model"/>
+    }
+    else
+    {
+        <input type="number" asp-for="@Model"/>
+    }
+    
+    <span asp-validation-for="@Model" class="text-danger"></span>
+</div>

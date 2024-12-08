@@ -1,0 +1,279 @@
+@charset "UTF-8";
+/* Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Onest:wght@100;200;300;400;500;600;700;800;900&display=swap");
+/* ANIMATION VARIABLES */
+.hero-container {
+  margin: 2rem 0 10rem 0;
+  padding: 3rem;
+  box-sizing: border-box;
+  width: 100%;
+  border-radius: 1.5rem;
+  background: rgb(247, 217, 217);
+  background: linear-gradient(126deg, rgb(247, 217, 217) 0%, rgb(231, 234, 242) 100%);
+  position: relative;
+}
+.hero-container .corner-ribbon {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 0;
+}
+.hero-container .front-div {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+}
+.hero-container .section-a {
+  padding: 3rem 10rem 3rem 10rem;
+  gap: 2rem;
+}
+.hero-container .section-a p {
+  font-size: 1.2rem;
+  color: rgba(60, 22, 46, 0.8);
+  line-height: 1.5;
+}
+.hero-container .section-b {
+  margin: 4rem 0 0 0;
+}
+.hero-container .section-b p {
+  font-size: 1.2rem;
+  color: rgba(60, 22, 46, 0.8);
+  line-height: 1.5;
+}
+.hero-container .section-c {
+  margin: 5rem auto -7rem auto;
+  background-color: #3c162e;
+  width: max-content;
+  min-width: 50rem;
+  border-radius: calc(1.5rem * 2);
+  color: #fff;
+}
+.hero-container .section-c P {
+  color: #fff;
+}
+.hero-container .section-c .tabs {
+  background-color: #fff;
+  padding: 1rem;
+  border-radius: 100px;
+  margin: -2.5rem 0 0 0;
+}
+.hero-container .section-c .tabs a {
+  padding: 1rem 2rem;
+  border-radius: 100px;
+}
+.hero-container .section-c .tabs a.active {
+  background-color: #3c162e;
+  color: #fff;
+}
+.hero-container .section-c .container-item {
+  width: 100%;
+  padding: 2rem 3rem 3rem 3rem;
+  box-sizing: border-box;
+}
+
+.procedure-container .procedure-listing .procedure-card {
+  margin: 3rem 0 0 0;
+  background-color: #fff;
+  border: 1px solid #e7e7e7;
+  padding: 2rem;
+  border-radius: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  transition: 200ms ease-in-out all;
+}
+.procedure-container .procedure-listing .procedure-card:hover {
+  cursor: default;
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.1);
+}
+.procedure-container .procedure-listing .procedure-card h3 {
+  font-weight: 600;
+  font-size: calc(1.5rem * 0.8);
+  margin-bottom: 0.5rem;
+}
+.procedure-container .procedure-listing .procedure-card .image-container {
+  background-color: #e7e1e1;
+  border: 1px solid #d2d0d9;
+  border-radius: 100px;
+  height: 4rem;
+  width: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: -3rem 0 0 0;
+}
+.procedure-container .procedure-listing .procedure-card .image-container img {
+  height: 2rem;
+  width: 2rem;
+}
+
+.assistance-container {
+  width: 100%;
+  height: 25rem;
+  border-radius: 1.5rem;
+  overflow: clip;
+  background-color: #3c162e;
+}
+.assistance-container .section-a {
+  width: 50%;
+  padding: 5rem;
+  box-sizing: border-box;
+  gap: 1rem;
+  color: #fff;
+}
+.assistance-container .section-b {
+  width: 50%;
+}
+.assistance-container .section-b img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.news-update-container .news-card {
+  background-color: #fff;
+  padding: 1.5rem 1.5rem 2rem 1.5rem;
+  border-radius: 1.5rem;
+  border: 1px solid #e7e7e7;
+  transition: 200ms ease-in-out all;
+}
+.news-update-container .news-card:hover {
+  cursor: default;
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.1);
+}
+.news-update-container .news-card p {
+  font-size: calc(1rem * 0.8);
+  opacity: 0.7;
+}
+.news-update-container .news-card h3 {
+  font-weight: 600;
+}
+.news-update-container .news-card img {
+  height: 12rem;
+  width: 100%;
+  object-fit: cover;
+  border-radius: calc(1.5rem * 0.9);
+}
+
+.faq-container {
+  background-color: #fff;
+  padding: 4rem 2rem;
+  border-radius: 1.5rem;
+  /* #region Package Details Extender*/
+  /* #endregion */
+}
+.faq-container p {
+  line-height: 1.5;
+}
+.faq-container .package-collapsibles section {
+  padding: 2rem;
+}
+@media (max-width: 575px) {
+  .faq-container .package-collapsibles section {
+    padding: 2rem 2rem 1rem 2rem;
+  }
+}
+@media (max-width: 575px) {
+  .faq-container .custom-movetop {
+    margin-top: -2rem;
+  }
+}
+.faq-container .collapsible {
+  cursor: pointer;
+  position: relative;
+}
+.faq-container .collapsible h3 {
+  font-weight: 600;
+}
+.faq-container .collapsible h3:after {
+  color: #c21313;
+  opacity: 0.4;
+  content: "+";
+  float: right;
+  font-size: 2rem;
+  transform: translateY(-0.5rem);
+}
+.faq-container .active h3:after {
+  content: "−" !important;
+}
+.faq-container .content-collapsible {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+.faq-container .a-component-clientscontainer {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(6, auto);
+  gap: 2rem;
+}
+@media (max-width: 575px) {
+  .faq-container .a-component-clientscontainer {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 0.5rem;
+  }
+}
+.faq-container .a-component-clientscontainer .a-clients {
+  border: 1px solid #ededed;
+  display: flex;
+  -ms-flex-direction: column;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+  height: 30rem;
+  padding: 1rem;
+  -webkit-align-items: center;
+  align-items: center;
+}
+@media (max-width: 575px) {
+  .faq-container .a-component-clientscontainer .a-clients {
+    -ms-flex-direction: row;
+    -webkit-flex-direction: row;
+    flex-direction: row;
+    height: 10rem;
+  }
+}
+.faq-container .a-component-clientscontainer .a-clients h3 {
+  margin: 1rem 0 0 0;
+  -webkit-flex-grow: 1;
+  flex-grow: 1;
+}
+@media (max-width: 575px) {
+  .faq-container .a-component-clientscontainer .a-clients h3 {
+    margin-left: 0.5rem;
+  }
+}
+.faq-container .a-component-clientscontainer .a-clients img {
+  min-height: 20rem;
+  width: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+  -o-object-position: center;
+  object-position: center;
+}
+@media (max-width: 575px) {
+  .faq-container .a-component-clientscontainer .a-clients img {
+    min-height: 0;
+    height: 100%;
+    width: 10rem;
+  }
+}
+.faq-container .a-component-clientscontainer .a-clients .buttons {
+  display: flex;
+}
+.faq-container .a-component-clientscontainer .a-clients .buttons button, .faq-container .a-component-clientscontainer .a-clients .buttons a {
+  margin: 0.5rem;
+}
+.faq-container .package-collapsibles {
+  padding: 2rem;
+}
+.faq-container .package-collapsibles section {
+  padding: 1rem 0 !important;
+}
+.faq-container hr {
+  opacity: 0.2;
+}
+.faq-container ul li {
+  margin: 0.5rem 0;
+}
+
+/*# sourceMappingURL=component.css.map */

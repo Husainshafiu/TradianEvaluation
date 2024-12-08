@@ -1,0 +1,23 @@
+﻿@model byte[]
+
+@{
+    var name = ViewData.TemplateInfo.HtmlFieldPrefix;
+    var required = ViewData["required"] as bool? ?? false;
+}
+
+
+<div>
+    <p>@name</p>
+    <label asp-for="@Model"></label>
+
+    @if (required)
+    {
+        <input required type="file" placeholder="@ViewData.ModelMetadata.DisplayName" asp-for="@Model"/>
+    }
+    else
+    {
+        <input type="file" placeholder="@ViewData.ModelMetadata.DisplayName" asp-for="@Model"/>
+    }
+
+    <span asp-validation-for="@Model" class="text-danger"></span>
+</div>

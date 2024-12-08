@@ -1,0 +1,47 @@
+<div class="hero-container">
+    <div class="corner-ribbon">
+        <img src="~/images/cornerpiece.svg" alt=""/>
+    </div>
+    
+    <div class="front-div">
+        <div class="flex flex-col gap-3 item-center text-center px-6 section-a">
+            <h1 class="xl">Get Ready for Tradian!</h1>
+            <p>
+                Phase 1 of Tradian is coming in November. Join our training sessions to master the platform and seamlessly transition your import and export operations to Tradian.
+            </p>
+            <a class="btn-primary">Register for Training</a>
+        </div>
+        <div class="section-b flex flex-col item-center text-center px-6">
+            <h2>Quick Lookup</h2>
+            <p>
+                instantly find diclaration status,trarifs details and vessels/container tracking
+            </p>
+        </div>
+        <div class="section-c flex flex-col item-center">
+            <div class="tabs">
+                <a class="active" asp-controller="Home" asp-action="GetDeclarationForm"
+                   data-ajax="true"
+                   data-ajax-method="GET"
+                   data-ajax-mode="replace"
+                   data-ajax-update="#quick-lookup-container">
+                    <i class="ph-duotone ph-box-arrow-down"></i>
+                    Check Declaration
+                </a>
+                <a asp-controller="Home" asp-action="GetContainerForm"
+                   data-ajax="true"
+                   data-ajax-method="GET"
+                   data-ajax-mode="replace"
+                   data-ajax-update="#quick-lookup-container">
+                    <i class="ph-duotone ph-cube"></i>
+                    Container Tracking
+                </a>
+            </div>
+            <div id="quick-lookup-container" class="container-item">
+                @{
+                    var tempModel = new DeclarationStatusViewModel();
+                    <partial name="partials/_heroDeclarationStatus" model="@tempModel"/>
+                }
+            </div>
+        </div>
+    </div>
+</div>

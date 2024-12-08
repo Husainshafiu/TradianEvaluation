@@ -1,0 +1,13 @@
+@model DateTime
+
+@{
+    var name = ViewData.TemplateInfo.HtmlFieldPrefix;
+    var required = ViewData["required"] as bool? ?? false;
+    var currentTime = DateTime.Now.ToString("yyyy-MM-ddTHH:mm");
+}
+
+<div>
+    <label asp-for="@Model"></label>
+    <input type="datetime-local" asp-for="@Model" value="@currentTime" required />
+    <span asp-validation-for="@Model" class="text-danger"></span>    
+</div>

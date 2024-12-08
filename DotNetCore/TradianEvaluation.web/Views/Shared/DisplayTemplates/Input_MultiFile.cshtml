@@ -1,0 +1,21 @@
+﻿@model byte[]
+
+@{
+    var required = ViewData["required"] as bool? ?? false;
+}
+
+
+<div>
+    <label hidden asp-for="@Model"></label>
+    
+    @if (required)
+    {
+        <input required multiple accept="image/*" type="file" placeholder="@ViewData.ModelMetadata.DisplayName" asp-for="@Model" />
+    }
+    else
+    {
+        <input multiple accept="image/*" type="file" placeholder="@ViewData.ModelMetadata.DisplayName" asp-for="@Model" />
+    }
+    
+    <span asp-validation-for="@Model" class="text-danger"></span>
+</div>

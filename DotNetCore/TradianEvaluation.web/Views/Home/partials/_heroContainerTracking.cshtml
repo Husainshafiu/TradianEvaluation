@@ -1,0 +1,10 @@
+@model ContainerStatusViewModel
+
+<div class="flex flex-col">
+    <h3>Container Tracking</h3>
+    <P class="sm">Retrieve Container status and ETA</P>
+    <form class="flex">
+        @Html.DisplayFor(x=> x.ContainerID, "Input_string", new{ showLabel = true, required = true })
+        <button type="submit">Search</button>
+    </form>
+</div>

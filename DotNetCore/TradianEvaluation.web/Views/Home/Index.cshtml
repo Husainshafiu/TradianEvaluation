@@ -1,4 +1,60 @@
-﻿@{
+﻿@using TradianEvaluation.web.Data
+@using TradianEvaluation.web.Data.Enums
+@{
     ViewData["Title"] = "Home Page";
 }
 
+@{
+    var exportProcedures = new PopularProcedure[]
+    {
+        new PopularProcedure
+        {
+            Name = "Duty Exemptions & Allowances", 
+            Description = "Duty Exemptions & Allowances for Businesses wishing to Export goods from Maldives", 
+            Image = "~/images/airplane.svg", 
+            ProcedureType = ProcedureType.Export
+        },
+        new PopularProcedure
+        {
+            Name = "Transit Procedure", 
+            Description = "Information about the Transit Procedure in Maldives", 
+            Image = "~/images/airplane.svg", 
+            ProcedureType = ProcedureType.Export
+        },
+        new PopularProcedure
+        {
+            Name = "Restricted Items", 
+            Description = "Items Restricted for Export from Maldives", 
+            Image = "~/images/airplane.svg", 
+            ProcedureType = ProcedureType.Export
+        },
+    };
+
+    var news = new News[]
+    {
+        new News
+        {
+            ImageUrl = "/images/news/frank-mckenna-tjX_sniNzgQ-unsplash.jpg",
+            Title = "User Acceptance Testing for MNSW Begins",
+            Date = new DateTime(2024, 12, 8),
+        },
+        new News
+        {
+            ImageUrl = "/images/news/GWIvMWmW4AAmpTM.jpg",
+            Title = "The Need for the MNSW System",
+            Date = new DateTime(2024, 12, 8),
+        },
+        new News
+        {
+            ImageUrl = "/images/news/uat4.jpg",
+            Title = "Extensive Preparations and Activities Pave the Way for Rollout of MNSW",
+            Date = new DateTime(2024, 12, 8),
+        },
+    };
+}
+
+<partial name="partials/_hero"/>
+<partial name="partials/_popularProcedures" model="@exportProcedures"/>
+<partial name="partials/_needAssistance"/>
+<partial name="partials/_newsUpdate" model="@news"/>
+<partial name="partials/_faq"/>

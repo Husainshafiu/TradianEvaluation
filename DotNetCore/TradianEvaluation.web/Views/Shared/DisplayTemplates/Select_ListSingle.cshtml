@@ -1,0 +1,28 @@
+﻿@model string
+
+@{
+    string cssClass = ViewData["CssClass"] as string;
+    string label = ViewData["Label"] as string;
+    List<string> extraOptions = ViewData["ExtraOptions"] as List<string>;
+    List<SelectListItem> data = ViewData["data"] as List<SelectListItem>;
+}
+
+<div>
+    @if (string.IsNullOrEmpty(label) || string.IsNullOrWhiteSpace(label))
+    {
+        <label asp-for="@Model"></label>
+    }
+    else
+    {
+        <label>@label</label>
+    }
+    <select class="@cssClass" asp-for="@Model" asp-items="@data">
+        @if (extraOptions != null)
+        {
+            foreach (var item in extraOptions)
+            {
+                <option value="@item">@item</option>
+            }
+        }
+    </select>
+</div>

@@ -1,0 +1,17 @@
+﻿@model string
+@{
+    var name = ViewData.TemplateInfo.HtmlFieldPrefix;
+    var required = ViewData["required"] as bool? ?? false;
+}
+<div>
+    <label hidden asp-for="@Model"></label>
+    @if (required)
+    {
+        <textarea required placeholder="@name" asp-for="@Model"></textarea>
+    }
+    else
+    {
+        <textarea placeholder="@name" asp-for="@Model"></textarea>
+    }
+    <span asp-validation-for="@Model" class="text-danger"></span>
+</div>

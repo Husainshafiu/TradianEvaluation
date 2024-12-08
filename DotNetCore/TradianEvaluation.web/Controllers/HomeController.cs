@@ -23,6 +23,19 @@ public class HomeController : Controller
         return View();
     }
 
+
+    [HttpGet]
+    public IActionResult GetDeclarationForm()
+    {
+        return PartialView("partials/_heroDeclarationStatus");
+    }
+    
+    [HttpGet]
+    public IActionResult GetContainerForm()
+    {
+        return PartialView("partials/_heroContainerTracking");
+    }
+
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
     public IActionResult Error()
     {

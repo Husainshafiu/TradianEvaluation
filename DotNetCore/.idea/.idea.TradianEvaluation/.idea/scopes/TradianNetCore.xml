@@ -1,0 +1,3 @@
+<component name="DependencyValidationManager">
+  <scope name="TradianNetCore" pattern="file:TradianEvaluation.web/wwwroot/scss//*" />
+</component>

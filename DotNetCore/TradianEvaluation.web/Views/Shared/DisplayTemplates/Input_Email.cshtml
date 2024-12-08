@@ -1,0 +1,37 @@
+﻿@model string
+@{
+    var showLabel = ViewData["showLabel"] as bool? ?? true;
+    var showPlaceholder = ViewData["showPlaceholder"] as bool? ?? false;
+    var name = ViewData.TemplateInfo.HtmlFieldPrefix;
+    var required = ViewData["required"] as bool? ?? false;
+}
+
+<div>
+    @if (showLabel)
+    {
+        <label  asp-for="@Model"></label>
+    }
+    @if (required)
+    {
+        @if (showPlaceholder)
+        {
+            <input type="email" required placeholder="@name" asp-for="@Model"/>
+        }
+        else
+        {
+            <input type="email" required asp-for="@Model"/>
+        }
+    }
+    else
+    {
+        @if (showPlaceholder)
+        {
+            <input type="email" placeholder="@name" asp-for="@Model"/>
+        }
+        else
+        {
+            <input type="email" asp-for="@Model"/>
+        }
+    }
+    <span asp-validation-for="@Model" class="text-danger"></span>
+</div>

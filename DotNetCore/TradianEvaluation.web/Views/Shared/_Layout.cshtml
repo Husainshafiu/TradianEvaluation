@@ -3,20 +3,63 @@
 <head>
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>@ViewData["Title"] - TradianEvaluation.web</title>
+    <title>@ViewData["Title"] - Tradian.web</title>
+
+    @await RenderSectionAsync("MetaTags", required:false)
+    <script src="https://unpkg.com/@@phosphor-icons/web"></script>
+
+    <link rel="stylesheet" href="~/scss/Global.min.css" asp-append-version="true"/>
+    <link rel="stylesheet" href="~/scss/component.min.css" asp-append-version="true"/>
+    
+    @await RenderSectionAsync("EarlyScripts", required: false)
+    @await RenderSectionAsync("Styles", required: false)
+    @await RenderSectionAsync("OpenGraph", required: false) 
 </head>
 <body>
 <header>
- 
+    <nav>
+        <div class="nav-container">
+            <div class="logo">
+                <img src="~/images/logo.png" alt=""/>
+                <h2>Tradian</h2>
+            </div>
+            <ul>
+                <li>
+                    <a>Business</a>
+                </li>
+                <li>
+                    <a>Individual</a>
+                </li>
+                <li>
+                    <a>Support</a>
+                </li>
+            </ul>
+            <a class="btn-primary">Login</a>
+        </div>
+    </nav>
 </header>
 <div class="container">
-    <main role="main" class="pb-3">
+    <main>
         @RenderBody()
     </main>
 </div>
 
-<footer>
-</footer>
+<partial name="Partials/_footer"/>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-ajax-unobtrusive/3.2.6/jquery.unobtrusive-ajax.min.js" integrity="sha512-DedNBWPF0hLGUPNbCYfj8qjlEnNE92Fqn7xd3Sscfu7ipy7Zu33unHdugqRD3c4Vj7/yLv+slqZhMls/4Oc7Zg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 @await RenderSectionAsync("Scripts", required: false)
+
+<script>
+    //on scroll add class to nav
+    $(window).scroll(function () {
+        if ($(this).scrollTop() > 50) {
+            $('nav').addClass('scrolled');
+        } else {
+            $('nav').removeClass('scrolled');
+        }
+    });
+</script>
+
 </body>
 </html>

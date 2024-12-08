@@ -1,0 +1,24 @@
+@model PopularProcedure[]
+
+
+<div class="flex flex-col procedure-container">
+    <div class="flex justify-between">
+        <h2>Popular Procedures</h2>
+        <div class="tabs flex">
+            <a>import</a>
+            <a>export</a>
+        </div>
+    </div>
+    <div class="grid grid-cols-3 gap-4 procedure-listing mt-2">
+        @if (Model != null)
+        {
+            if (Model.Any())
+            {
+                foreach (var procedure in Model)
+                {
+                    <partial name="partials/_procedureCard" model="@procedure"/>
+                }
+            }
+        }
+    </div>
+</div>

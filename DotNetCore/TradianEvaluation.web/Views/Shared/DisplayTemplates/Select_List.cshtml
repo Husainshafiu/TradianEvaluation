@@ -1,0 +1,13 @@
+﻿@model List<string>
+
+@{
+    string cssClass = ViewData["CssClass"] as string;
+    List<SelectListItem> data = ViewData["data"] as List<SelectListItem>;
+}
+
+<div>
+    <label asp-for="@Model"></label>
+    <select class="@cssClass" multiple="multiple" asp-for="@Model" asp-items="@data">
+     
+    </select>
+</div>

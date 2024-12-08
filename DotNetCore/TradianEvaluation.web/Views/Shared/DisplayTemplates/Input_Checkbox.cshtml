@@ -1,0 +1,13 @@
+﻿@model bool
+
+@{
+    var label = ViewData["label"] as string ?? "";
+    var state = ViewData["state"] as bool? ?? false;
+}
+
+<div class="checkbox-container">
+    <input
+        @(state ? "checked" : "")
+        type="checkbox" asp-for="@Model"/>
+    <p>@label</p>
+</div>

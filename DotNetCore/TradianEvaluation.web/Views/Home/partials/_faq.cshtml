@@ -1,0 +1,104 @@
+
+
+<div class="flex-col flex faq-container mt-3">
+    <div class="flex flex-col text-center">
+        <h2>Frequently Asked Questions</h2>
+        <p class="sm">
+            These are the most commonly asked questions about import and export.
+        </p>
+    </div>
+    <div class="accordion-container">
+        <div class="g-col-sm-6 g-col-12 px-2 px-sm-0 mx-sm-0 mx-2 custom-movetop">
+            <article class="package-collapsibles">
+                <section class="mb-2 rounded-2 bg-gradient">
+                    <div class="collapsible">
+                        <h3>What is Tradian?</h3>
+                    </div>
+                    <div class="content-collapsible">
+                        <p>
+                            Tradian is a trade facilitation platform designed to simplify and streamline international trade processes in Maldives.
+                            <br/>
+                            It is a centralized digital platform designed to streamline international trade by enabling trade and transport parties to submit standard information and documents through a single entry point.
+                        </p>
+                    </div>
+                </section>
+                <hr/>
+                <section>
+                    <div class="collapsible">
+                        <h3>What is the use of Tradian?</h3>
+                    </div>
+                    <div class="content-collapsible">
+                        <p>
+                            Currently, the trade landscape in the Maldives requires the use of different portals for each stage of the international trade process, leading to significant delays in imports and exports. However, with a National Single Window like our Tradian Portal, businesses and individuals can complete international trade procedures more efficiently and in a shorter period of time.
+                            <br/>
+                            <br/>
+                            The Maldives trade landscape involves multiple portals for different stages of international trade. With a National Single Window like our Tradian Portal, businesses can streamline services through single submission and integration, completing trade procedures more efficiently.
+                        </p>
+                    </div>
+                </section>
+                <hr/>
+                <section>
+                    <div class="collapsible">
+                        <h3>Which parties are required to register on Tradian in Phase 01?</h3>
+                    </div>
+                    <div class="content-collapsible">
+                        <p>
+                            During Phase One, the following parties must complete registration on Tradian:
+                        </p>
+                        <ul>
+                            <li>Shipping Agents</li>
+                            <li>Freight Forwarding Companies</li>
+                            <li>Exporters and Importers</li>
+                        </ul>
+                        <p>
+                            These entities are essential participants in the trade process and need registration to access Tradian's services and features.
+                        </p>
+                    </div>
+                </section>
+                <hr/>
+                <section>
+                    <div class="collapsible">
+                        <h3>What are the services available in Phase 01?</h3>
+                    </div>
+                    <div class="content-collapsible">
+                        <ul>
+                            <li>Vessel Registration</li>
+                            <li>ETA</li>
+                            <li>Vessel Declaration</li>
+                            <li>Inward and outward</li>
+                            <li>Sea Manifest</li>
+                            <li>Electronic Delivery Order. (EDO)</li>
+                            <li>Licenses, Permits, Certificates and Others. (LPCOs)</li>
+                            <li>Chemical Import Permit</li>
+                            <li>Fireworks & Flare Import Permit</li>
+                            <li>Construction Material Import Permit</li>
+                            <li>Pork & Liquor License- Resorts</li>
+                            <li>Pork & Liquor License- Bonded Warehouse</li>
+                            <li>Pork & Liquor License- Vessels</li>
+                            <li>Pork & Liquor License- Embassies</li>
+                            <li>Duty Exemption (Ministry of Tourism)</li>
+                        </ul>
+                    </div>
+                </section>
+                <hr/>
+            </article>
+        </div>
+    </div>
+</div>
+<script>
+        var coll = document.getElementsByClassName("collapsible");
+        var i;
+
+        for (i = 0; i < coll.length; i++) {
+            coll[i].addEventListener("click", function () {
+                this.classList.toggle("active");
+                var content = this.nextElementSibling;
+                if (content.style.maxHeight) {
+                    content.style.maxHeight = null;
+                } else {
+                    content.style.maxHeight = content.scrollHeight + "px";
+                }
+            });
+        }
+        
+    </script>

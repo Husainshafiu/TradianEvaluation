@@ -1,0 +1,17 @@
+@model News[]
+
+<div class="flex flex-col news-update-container mt-5">
+    <h2>News Update</h2>
+    @if (Model != null)
+    {
+        if (Model.Any())
+        {
+            <div class="grid grid-cols-3 gap-4 mt-3">
+                @foreach (var news in Model)
+                {
+                    <partial name="partials/_newsCard" model="@news"/>
+                }
+            </div>
+        }
+    }
+</div>
